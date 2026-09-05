@@ -1,0 +1,31 @@
+{
+  "name": "CropMath v1 formal evaluation manifest",
+  "data_version": "cropmath-v1",
+  "official_unique_samples": 1003,
+  "test_samples": 751,
+  "gold_policy": "gold is a 95-sample audit subset copied from test, not an independent split",
+  "hidden_policy": "question-public, answer-withheld auxiliary set; formulas, inputs and prompts are public; no hosted scoring service; disjoint IDs do not prove absence of training contamination",
+  "conditions": [
+    "C",
+    "K_name",
+    "K_formula",
+    "K_domain",
+    "K_distractor",
+    "K_wrong"
+  ],
+  "prompt_config": "eval_prompts",
+  "prompt_field": "prompt",
+  "decoding": {
+    "temperature": 0.0,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "correctness": {
+    "rule": "abs(prediction - ground_truth) <= max(0.5*10^-precision, abs(ground_truth)*0.01)"
+  },
+  "statistics": {
+    "paired_test": "McNemar exact test at item level",
+    "effect_size": "paired accuracy delta",
+    "multiple_testing": "Benjamini-Hochberg FDR"
+  }
+}

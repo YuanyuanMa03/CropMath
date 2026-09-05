@@ -1,0 +1,44 @@
+# CropMath v1 evaluation protocol.
+#
+# This file is a framework-neutral protocol description.
+
+name: CropMath
+version: cropmath-v1
+primary_config: eval_prompts
+primary_split: test
+hidden_config: hidden_public
+hidden_policy: answers_not_distributed
+hidden_scoring_service: unavailable
+conditions:
+  - C
+  - K_name
+  - K_formula
+  - K_domain
+  - K_distractor
+  - K_wrong
+prompt_field: prompt
+target_field: answer_float
+metadata_fields:
+  - sample_id
+  - formula_id
+  - family
+  - mode
+  - level
+  - precision
+decoding:
+  temperature: 0.0
+  max_new_tokens: 2048
+  seed: 42
+  thinking_mode: off
+answer_extraction_order:
+  - boxed
+  - gsm8k_hashes
+  - explicit_answer_line
+  - last_number_fallback
+correctness:
+  type: numeric_tolerance
+  expression: abs(prediction - answer_float) <= max(0.5 * 10^-precision, abs(answer_float) * 0.01)
+statistics:
+  paired_test: mcnemar_exact
+  effect_size: paired_accuracy_delta
+  multiple_testing: benjamini_hochberg_fdr

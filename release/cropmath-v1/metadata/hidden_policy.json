@@ -1,0 +1,27 @@
+{
+  "hidden_samples": 160,
+  "seed": 20260609,
+  "public_file": "release/cropmath-v1/hidden_public/hidden_public.jsonl",
+  "private_answer_file": "not_included_in_public_release",
+  "answer_release_policy": "question-public, answer-withheld auxiliary set; formulas, inputs and prompts are public; no hosted scoring service; disjoint IDs do not prove absence of training contamination",
+  "families": {
+    "carbon_nitrogen_cycle": 35,
+    "methane_emission": 27,
+    "growth_yield": 76,
+    "environmental_response": 22
+  },
+  "modes": {
+    "branch": 21,
+    "chain_2": 21,
+    "direct": 57,
+    "sensitivity": 61
+  },
+  "levels": {
+    "1": 28,
+    "2": 58,
+    "3": 40,
+    "4": 34
+  },
+  "public_id_overlap": 0,
+  "private_answer_verification": "not verified by this public candidate build"
+}

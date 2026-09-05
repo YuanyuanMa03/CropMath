@@ -1,0 +1,128 @@
+{
+  "data_version": "cropmath-v1",
+  "source_data_dir": "release/cropmath-v1[private path removed]",
+  "official_unique_samples": 1003,
+  "dev_test_overlap": 0,
+  "gold_subset_of_test": true,
+  "conditions": [
+    "C",
+    "K_name",
+    "K_formula",
+    "K_domain",
+    "K_distractor",
+    "K_wrong"
+  ],
+  "splits": {
+    "dev": {
+      "rows": 252,
+      "unique_ids": 252,
+      "formulas": 61,
+      "families": {
+        "carbon_nitrogen_cycle": 65,
+        "methane_emission": 47,
+        "growth_yield": 111,
+        "environmental_response": 29
+      },
+      "modes": {
+        "branch": 33,
+        "chain_2": 33,
+        "direct": 100,
+        "sensitivity": 86
+      },
+      "levels": {
+        "1": 57,
+        "2": 93,
+        "3": 54,
+        "4": 48
+      }
+    },
+    "test": {
+      "rows": 751,
+      "unique_ids": 751,
+      "formulas": 62,
+      "families": {
+        "carbon_nitrogen_cycle": 168,
+        "methane_emission": 127,
+        "growth_yield": 353,
+        "environmental_response": 103
+      },
+      "modes": {
+        "branch": 99,
+        "chain_2": 99,
+        "direct": 272,
+        "sensitivity": 281
+      },
+      "levels": {
+        "1": 153,
+        "2": 270,
+        "3": 190,
+        "4": 138
+      }
+    },
+    "gold": {
+      "rows": 95,
+      "unique_ids": 95,
+      "formulas": 48,
+      "families": {
+        "carbon_nitrogen_cycle": 20,
+        "methane_emission": 15,
+        "growth_yield": 49,
+        "environmental_response": 11
+      },
+      "modes": {
+        "branch": 12,
+        "chain_2": 15,
+        "direct": 35,
+        "sensitivity": 33
+      },
+      "levels": {
+        "1": 20,
+        "2": 34,
+        "3": 26,
+        "4": 15
+      }
+    },
+    "hidden_public": {
+      "rows": 160,
+      "unique_ids": 160,
+      "formulas": 56,
+      "families": {
+        "carbon_nitrogen_cycle": 35,
+        "methane_emission": 27,
+        "growth_yield": 76,
+        "environmental_response": 22
+      },
+      "modes": {
+        "branch": 21,
+        "chain_2": 21,
+        "direct": 57,
+        "sensitivity": 61
+      },
+      "levels": {
+        "1": 28,
+        "2": 58,
+        "3": 40,
+        "4": 34
+      }
+    }
+  },
+  "eval_prompt_rows": {
+    "dev": 1512,
+    "test": 4506,
+    "gold": 570
+  },
+  "hidden_public_rows": 160,
+  "skipped_rows": {
+    "dev": [],
+    "test": [
+      "CMF051_sensitivity_t1_0001",
+      "CMF046_sensitivity_t0_0001",
+      "CMF054_sensitivity_t0_0000",
+      "CMF011_sensitivity_t1_0000",
+      "CMF028_sensitivity_t0_0000"
+    ],
+    "gold": [
+      "CMF051_sensitivity_t1_0001"
+    ]
+  }
+}

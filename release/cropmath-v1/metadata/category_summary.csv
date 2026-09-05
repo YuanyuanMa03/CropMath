@@ -1,0 +1,229 @@
+split,category,value,count
+dev,family,carbon_nitrogen_cycle,65
+dev,family,methane_emission,47
+dev,family,growth_yield,111
+dev,family,environmental_response,29
+dev,subject,carbon-nitrogen cycling nitrogen,5
+dev,subject,carbon-nitrogen cycling photosynthesis,24
+dev,subject,carbon-nitrogen cycling respiration,8
+dev,subject,carbon-nitrogen cycling soil carbon,12
+dev,subject,carbon-nitrogen cycling stress,4
+dev,subject,carbon-nitrogen cycling water,7
+dev,subject,Dry matter partitioning,17
+dev,subject,Leaf area growth,13
+dev,subject,Methane,47
+dev,subject,Nitrogen,5
+dev,subject,Phenology,26
+dev,subject,Photosynthesis,22
+dev,subject,Respiration,19
+dev,subject,environmental-response formula system,29
+dev,subject,Temperature response,4
+dev,subject,Temperature stress,9
+dev,subject,Yield formation,1
+dev,mode,branch,33
+dev,mode,chain_2,33
+dev,mode,direct,100
+dev,mode,sensitivity,86
+dev,math_type,Beta temperature response,8
+dev,math_type,Biomass-weighted allocation,1
+dev,math_type,Chained multiplicative decomposition,4
+dev,math_type,Chained sum,4
+dev,math_type,Double logistic,2
+dev,math_type,Exponential growth,2
+dev,math_type,Exponential quadratic,7
+dev,math_type,Exponential ratio,4
+dev,math_type,Linear,12
+dev,math_type,Linear decline,4
+dev,math_type,Logarithmic,11
+dev,math_type,Logarithmic minimum,3
+dev,math_type,Logistic,2
+dev,math_type,Maximum linear,8
+dev,math_type,Maximum with chained drivers,6
+dev,math_type,Michaelis-Menten response,4
+dev,math_type,Minimum stress multiplier,3
+dev,math_type,Multi-step sigmoid,3
+dev,math_type,Multiplicative,8
+dev,math_type,Multiplicative conversion,10
+dev,math_type,Multiplicative minimum stress,3
+dev,math_type,Multiplicative with minimum stress,6
+dev,math_type,Piecewise exponential,6
+dev,math_type,Piecewise exponential decay,6
+dev,math_type,Piecewise linear,4
+dev,math_type,Piecewise linear cap,4
+dev,math_type,Piecewise linear stress,5
+dev,math_type,Piecewise linear/exponential,1
+dev,math_type,Piecewise logistic,3
+dev,math_type,Piecewise minimum,4
+dev,math_type,Piecewise polynomial,4
+dev,math_type,Piecewise power penalty,6
+dev,math_type,Piecewise quadratic,2
+dev,math_type,Piecewise trigonometric,4
+dev,math_type,Piecewise water response,7
+dev,math_type,Power attenuation,2
+dev,math_type,Power product,2
+dev,math_type,Power response,5
+dev,math_type,Product,14
+dev,math_type,Product with Q10 temperature response,4
+dev,math_type,Product with exponential saturation,2
+dev,math_type,Q10 temperature response,4
+dev,math_type,Q10 with DVI correction,8
+dev,math_type,Q10 with temperature clipping,5
+dev,math_type,Quadratic polynomial,2
+dev,math_type,Ratio,7
+dev,math_type,Residual from shoot partitioning,6
+dev,math_type,Residual with piecewise components,3
+dev,math_type,Stage-dependent product,12
+dev,math_type,Subtraction and conversion,5
+dev,level,1,57
+dev,level,2,93
+dev,level,3,54
+dev,level,4,48
+gold,family,carbon_nitrogen_cycle,20
+gold,family,methane_emission,15
+gold,family,growth_yield,49
+gold,family,environmental_response,11
+gold,subject,carbon-nitrogen cycling nitrogen,2
+gold,subject,carbon-nitrogen cycling photosynthesis,8
+gold,subject,carbon-nitrogen cycling respiration,2
+gold,subject,carbon-nitrogen cycling soil carbon,5
+gold,subject,carbon-nitrogen cycling water,1
+gold,subject,Dry matter partitioning,12
+gold,subject,Leaf area growth,10
+gold,subject,Methane,15
+gold,subject,Nitrogen,2
+gold,subject,Phenology,8
+gold,subject,Photosynthesis,9
+gold,subject,Respiration,5
+gold,subject,environmental-response formula system,11
+gold,subject,Temperature stress,4
+gold,subject,Yield formation,1
+gold,mode,branch,12
+gold,mode,chain_2,15
+gold,mode,direct,35
+gold,mode,sensitivity,33
+gold,math_type,Beta temperature response,1
+gold,math_type,Biomass-weighted allocation,1
+gold,math_type,Chained multiplicative decomposition,1
+gold,math_type,Chained sum,1
+gold,math_type,Exponential growth,4
+gold,math_type,Exponential ratio,1
+gold,math_type,Exponential saturation,1
+gold,math_type,Linear,2
+gold,math_type,Logarithmic,4
+gold,math_type,Logarithmic minimum,3
+gold,math_type,Logistic,1
+gold,math_type,Maximum linear,2
+gold,math_type,Michaelis-Menten response,3
+gold,math_type,Minimum stress multiplier,3
+gold,math_type,Multi-step sigmoid,5
+gold,math_type,Multiplicative,3
+gold,math_type,Multiplicative conversion,2
+gold,math_type,Multiplicative with minimum stress,2
+gold,math_type,Piecewise exponential,5
+gold,math_type,Piecewise exponential decay,2
+gold,math_type,Piecewise linear,4
+gold,math_type,Piecewise linear cap,3
+gold,math_type,Piecewise linear stress,1
+gold,math_type,Piecewise linear/exponential,3
+gold,math_type,Piecewise logistic,2
+gold,math_type,Piecewise minimum,1
+gold,math_type,Piecewise polynomial,2
+gold,math_type,Piecewise power penalty,2
+gold,math_type,Piecewise quadratic,5
+gold,math_type,Piecewise water response,1
+gold,math_type,Power attenuation,2
+gold,math_type,Power response,2
+gold,math_type,Product,3
+gold,math_type,Product with Q10 temperature response,2
+gold,math_type,Product with exponential saturation,1
+gold,math_type,Q10 temperature response,1
+gold,math_type,Q10 with DVI correction,2
+gold,math_type,Q10 with temperature clipping,2
+gold,math_type,Quadratic polynomial,3
+gold,math_type,Ratio,2
+gold,math_type,Residual with piecewise components,1
+gold,math_type,Subtraction and conversion,3
+gold,level,1,20
+gold,level,2,34
+gold,level,3,26
+gold,level,4,15
+test,family,carbon_nitrogen_cycle,168
+test,family,methane_emission,127
+test,family,growth_yield,353
+test,family,environmental_response,103
+test,subject,carbon-nitrogen cycling nitrogen,31
+test,subject,carbon-nitrogen cycling photosynthesis,42
+test,subject,carbon-nitrogen cycling respiration,10
+test,subject,carbon-nitrogen cycling soil carbon,53
+test,subject,carbon-nitrogen cycling stress,14
+test,subject,carbon-nitrogen cycling water,11
+test,subject,Dry matter partitioning,79
+test,subject,Leaf area growth,53
+test,subject,Methane,127
+test,subject,Nitrogen,7
+test,subject,Phenology,68
+test,subject,Photosynthesis,62
+test,subject,Respiration,40
+test,subject,environmental-response formula system,103
+test,subject,Temperature response,14
+test,subject,Temperature stress,27
+test,subject,Yield formation,10
+test,mode,branch,99
+test,mode,chain_2,99
+test,mode,direct,272
+test,mode,sensitivity,281
+test,math_type,Beta temperature response,27
+test,math_type,Biomass-weighted allocation,11
+test,math_type,Chained multiplicative decomposition,14
+test,math_type,Chained sum,14
+test,math_type,Double logistic,16
+test,math_type,Exponential growth,16
+test,math_type,Exponential quadratic,5
+test,math_type,Exponential ratio,14
+test,math_type,Exponential saturation,12
+test,math_type,Linear,23
+test,math_type,Linear decline,8
+test,math_type,Logarithmic,13
+test,math_type,Logarithmic minimum,15
+test,math_type,Logistic,10
+test,math_type,Maximum linear,22
+test,math_type,Maximum with chained drivers,12
+test,math_type,Michaelis-Menten response,14
+test,math_type,Minimum stress multiplier,15
+test,math_type,Multi-step sigmoid,15
+test,math_type,Multiplicative,28
+test,math_type,Multiplicative conversion,8
+test,math_type,Multiplicative minimum stress,15
+test,math_type,Multiplicative with minimum stress,12
+test,math_type,Piecewise exponential,30
+test,math_type,Piecewise exponential decay,12
+test,math_type,Piecewise linear,14
+test,math_type,Piecewise linear cap,14
+test,math_type,Piecewise linear stress,13
+test,math_type,Piecewise linear/exponential,17
+test,math_type,Piecewise logistic,15
+test,math_type,Piecewise minimum,20
+test,math_type,Piecewise polynomial,14
+test,math_type,Piecewise power penalty,12
+test,math_type,Piecewise quadratic,22
+test,math_type,Piecewise trigonometric,14
+test,math_type,Piecewise water response,11
+test,math_type,Power attenuation,10
+test,math_type,Power product,10
+test,math_type,Power response,13
+test,math_type,Product,32
+test,math_type,Product with Q10 temperature response,14
+test,math_type,Product with exponential saturation,10
+test,math_type,Q10 temperature response,13
+test,math_type,Q10 with DVI correction,10
+test,math_type,Q10 with temperature clipping,13
+test,math_type,Quadratic polynomial,10
+test,math_type,Ratio,17
+test,math_type,Residual from shoot partitioning,12
+test,math_type,Residual with piecewise components,15
+test,math_type,Stage-dependent product,12
+test,math_type,Subtraction and conversion,13
+test,level,1,153
+test,level,2,270
+test,level,3,190
+test,level,4,138

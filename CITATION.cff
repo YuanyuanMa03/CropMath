@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: 'CropMath: An Objective Benchmark for Mechanistic Formula Reasoning in Agricultural
+  Large Language Models'
+message: If you use this dataset, please cite it using the metadata below.
+type: dataset
+authors:
+- family-names: Ma
+  given-names: Yuanyuan
+  affiliation: Nanjing Agricultural University
+year: 2026
+license: CC-BY-4.0
+abstract: CropMath is an objective benchmark for evaluating mechanistic formula reasoning
+  in agricultural large language models. It contains 62 formulas from 4 public family
+  categories (growth_yield, carbon_nitrogen_cycle, methane_emission, environmental_response),
+  6 knowledge-ablation conditions, and 4 reasoning modes. Ground-truth answers are
+  derived deterministically from the documented mathematical expressions.
+keywords:
+- agricultural science
+- mechanistic formula reasoning
+- formula reasoning
+- numerical reasoning
+- benchmark
+- knowledge ablation
+- LLM evaluation
+repository-code: https://github.com/YuanyuanMa03/CropMath
