@@ -1,7 +1,7 @@
 [project]
-name = "cropmath-public-candidate"
+name = "cropmath-toolkit"
 version = "0.0.0"
-description = "Local validation environment for the CropMath public candidate"
+description = "Validation and scoring environment for CropMath"
 requires-python = ">=3.12,<3.13"
 dependencies = ["datasets==5.0.1"]
 

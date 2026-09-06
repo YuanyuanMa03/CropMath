@@ -1,10 +1,14 @@
-# CropMath toolkit for private review
+# CropMath
 
-This repository contains the CropMath dataset, prompt builders, numeric answer
-parser and local validation tests. It is deposited for private review at
-[YuanyuanMa03/CropMath](https://github.com/YuanyuanMa03/CropMath), alongside the
-private [Hugging Face dataset](https://huggingface.co/datasets/myy555/CropMath).
-Access is restricted; this is not a public release and no DOI is assigned.
+CropMath evaluates numerical execution of agricultural mechanistic formulas under
+six controlled knowledge conditions. This repository contains the dataset,
+prompt builders, numeric answer parser, batch scorer and validation tests.
+The dataset is also available on the
+[Hugging Face Hub](https://huggingface.co/datasets/myy555/CropMath); both
+platforms carry the same `cropmath-v1` data payload.
+
+See [reproducibility scope](release/cropmath-v1/REPRODUCIBILITY.md) for the
+relationship between these artifacts and the paper.
 
 ## Get started locally
 
@@ -28,8 +32,8 @@ and the selected public-source scan; a skipped check is never reported as passed
 | Path | Purpose |
 |---|---|
 | `src/cropmath/` | Prompt builders and numeric extraction/tolerance scoring |
-| `release/cropmath-v1/` | The same dataset payload as the standalone Hugging Face candidate |
-| `scripts/` | Dataset, formula catalog and result-record validators |
+| `release/cropmath-v1/` | The same dataset payload as the standalone Hugging Face dataset |
+| `scripts/` | Batch scorer, dataset, formula catalog and result-record validators |
 | `tests/` | Public parser, validation and actual dataset-loading tests |
 | `examples/quickstart.py` | Local data and public-API smoke example |
 | `pyproject.toml`, `uv.lock` | Reproducible local test and dataset-loading environment |
@@ -42,13 +46,22 @@ split relationships and scientific limitations.
 
 ## Evaluate your own model outputs
 
-Load `eval_prompts` from the bundled dataset, send only each row's `prompt` to
-your model, and retain its `id`, `sample_id` and `condition` with the response.
-Use `cropmath.answer_parser.extract_answer(response)` followed by
-`is_correct(prediction, row["answer_float"], row["precision"])` to score it.
-Treat parsing failures as incorrect and report complete expected-sample coverage;
-do not silently drop failed or missing predictions. The executable quickstart
-demonstrates these APIs. Use the same items for paired condition comparisons.
+Prepare one JSONL file per model/run. Each row must contain `id` (copied exactly
+from the selected `eval_prompts` row) and `response` (the model's output text).
+Send only the prompt content to your model; never send reference answer fields.
+Use an empty response for a failed generation so it remains in the denominator.
+
+```bash
+uv run --locked python scripts/score_predictions.py --predictions predictions.jsonl --split test --output scores.json
+```
+
+This scores all six conditions by default: 4,506 responses for test. To score only
+C, add `--conditions C` and provide exactly its 751 responses. Other public splits
+are available through `--split dev` or `--split gold`. Duplicate, unknown and
+missing IDs are rejected; unparseable outputs count as incorrect. Existing report
+files are never overwritten. Accuracy is reported per condition on a 0–1 scale.
+See [evaluation instructions](docs/EVALUATION.md) for the input contract, prompt
+format and reporting requirements.
 
 `validate_eval_results.py` checks the project's detailed result schema. Its
 `--formal-config` mode checks the historical deterministic local-inference
@@ -72,13 +85,13 @@ are maintained separately and are not part of this public package.
 
 ## License, citation and maintenance
 
-Code uses the existing MIT notice in `LICENSE`; data uses CC BY 4.0 as specified
-in the dataset's `LICENSE`. `CITATION.cff` provides attribution metadata and the private repository address;
-no DOI is assigned. Environment metadata version `0.0.0`
-identifies this local validation project; it is not a published software release.
+Code uses the MIT notice in `LICENSE`; data uses CC BY 4.0 as specified in the
+dataset's `LICENSE`. `CITATION.cff` provides dataset attribution and the
+repository link. No paper DOI is assigned here; cite via `CITATION.cff` and update
+it when a paper reference becomes available. Environment metadata version `0.0.0`
+tracks the validation environment for these tests; it is not a versioned software
+release.
 
 Keep public formula IDs, split names and condition names stable. After changes,
 run the tests and both release validators above. Data-loading tests do not prove
-formula provenance or human-audit completion. Any future public release must update
-the visibility notice only after access settings have actually been changed
-with the maintainer's authorization and online access has been checked.
+formula provenance or human-audit completion.

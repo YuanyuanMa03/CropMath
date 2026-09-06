@@ -6,6 +6,11 @@ language:
   - zh
 task_categories:
   - question-answering
+tags:
+  - agriculture
+  - numerical-reasoning
+size_categories:
+  - 1K<n<10K
 configs:
   - config_name: default
     default: true
@@ -30,14 +35,14 @@ configs:
         path: hidden_public/hidden_public.jsonl
 ---
 
-# CropMath dataset for private review
+# CropMath
 
 CropMath contains agricultural mechanistic formula questions with numeric
 reference answers and controlled knowledge conditions. The `cropmath-v1`
-snapshot is deposited for private review in [myy555/CropMath](https://huggingface.co/datasets/myy555/CropMath).
-The accompanying toolkit is in [YuanyuanMa03/CropMath](https://github.com/YuanyuanMa03/CropMath).
-These repositories require access permission. This is not a public release;
-no DOI or hosted hidden-set evaluation service is provided.
+snapshot is publicly available at
+[myy555/CropMath](https://huggingface.co/datasets/myy555/CropMath); the
+accompanying prompt builders, scorer and validators are in the code repository
+[YuanyuanMa03/CropMath](https://github.com/YuanyuanMa03/CropMath).
 
 ## Contents and split relationships
 
@@ -57,25 +62,25 @@ The public process categories are `growth_yield`, `carbon_nitrogen_cycle`,
 `methane_emission`, and `environmental_response`. Reasoning modes are `direct`,
 `sensitivity`, `branch`, and `chain_2`.
 
-## Local loading
-
-Run this example from the dataset directory with the `datasets` package installed:
+## Loading from the Hub
 
 ```python
-from pathlib import Path
 from datasets import load_dataset
 
-path = str(Path.cwd())
-questions = load_dataset(path, "default")
-prompts = load_dataset(path, "eval_prompts")
-auxiliary = load_dataset(path, "hidden_public")
+questions = load_dataset("myy555/CropMath", "default")
+prompts = load_dataset("myy555/CropMath", "eval_prompts")
+auxiliary = load_dataset("myy555/CropMath", "hidden_public")
 assert len(questions["test"]) == 751
 assert len(prompts["test"]) == 4506
 assert len(auxiliary["hidden_public"]) == 160
 ```
 
-The standalone Hugging Face candidate also contains `pyproject.toml`, `uv.lock`,
-validation scripts and dataset tests. From its root:
+Pin the released dataset revision in experiment records. Do not put access
+tokens in code or prediction files.
+
+To work offline or to run the bundled validators, download this repository and
+use it as a local path. The standalone dataset directory also contains
+`pyproject.toml`, `uv.lock`, validation scripts and dataset tests. From its root:
 
 ```bash
 uv sync --locked
@@ -84,25 +89,9 @@ uv run --locked python scripts/validate_cropmath_release.py --release-dir . --no
 uv run --locked python scripts/validate_formula_catalog.py --path metadata/formula_catalog.csv
 ```
 
-For the copy inside the GitHub candidate, use that repository's root README
+For the copy inside the GitHub repository, use that repository's root README
 commands instead. Validation success means the specified local checks passed;
 it does not establish scientific validity or online Viewer behavior.
-
-## Authenticated remote loading
-
-For an account granted access to the private dataset, authenticate with
-`hf auth login` in an environment containing the Hugging Face CLI, then run:
-
-```python
-from datasets import load_dataset
-
-questions = load_dataset("myy555/CropMath", "default", token=True)
-prompts = load_dataset("myy555/CropMath", "eval_prompts", token=True)
-auxiliary = load_dataset("myy555/CropMath", "hidden_public", token=True)
-```
-
-The local loading instructions remain useful for downloaded copies. Do not
-publish access tokens or include them in notebooks and scripts.
 
 ## Fields and use
 
@@ -150,7 +139,8 @@ proof of absence of training contamination. See `HIDDEN_POLICY.md`.
 ## Licensing and attribution
 
 Dataset contents are provided under CC BY 4.0; see `LICENSE`. Validation code
-included in the standalone candidate uses the MIT terms in `CODE_LICENSE`.
-The GitHub candidate has a separate MIT license for its code. Attribution
-metadata is provided in `CITATION.cff`, including the private toolkit address.
-No DOI or public release identifier is asserted. Existing notices are preserved.
+included in this dataset repository uses the MIT terms in `CODE_LICENSE`.
+The GitHub repository carries a separate MIT license for its code.
+Attribution metadata is provided in `CITATION.cff`, including the code
+repository link. No paper DOI is claimed. Existing notices are preserved. See
+[reproducibility scope](REPRODUCIBILITY.md) for what these artifacts support.

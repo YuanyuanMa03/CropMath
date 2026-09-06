@@ -1,7 +1,11 @@
 {
-  "role": "github private review deposit",
+  "role": "github local publication candidate",
   "dataset_version": "cropmath-v1",
+  "remote_publication_verified": false,
   "hidden_scoring_service": "unavailable",
-  "visibility": "private",
+  "release_stage": "public_release_ready",
+  "publish_at": "manuscript_submission",
+  "intended_visibility": "public",
+  "remote_sync_performed": false,
   "public_release": false
 }

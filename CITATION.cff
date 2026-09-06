@@ -9,6 +9,7 @@ authors:
   affiliation: Nanjing Agricultural University
 year: 2026
 license: CC-BY-4.0
+repository-code: https://github.com/YuanyuanMa03/CropMath
 abstract: CropMath is an objective benchmark for evaluating mechanistic formula reasoning
   in agricultural large language models. It contains 62 formulas from 4 public family
   categories (growth_yield, carbon_nitrogen_cycle, methane_emission, environmental_response),
@@ -22,4 +23,3 @@ keywords:
 - benchmark
 - knowledge ablation
 - LLM evaluation
-repository-code: https://github.com/YuanyuanMa03/CropMath
