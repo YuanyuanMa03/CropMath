@@ -37,6 +37,8 @@ configs:
 
 # CropMath
 
+**English** | [简体中文](README.zh-CN.md)
+
 CropMath contains agricultural mechanistic formula questions with numeric
 reference answers and controlled knowledge conditions. The `cropmath-v1`
 snapshot is publicly available at

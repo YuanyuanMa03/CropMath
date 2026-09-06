@@ -1,5 +1,7 @@
 # CropMath
 
+**English** | [简体中文](README.zh-CN.md)
+
 CropMath evaluates numerical execution of agricultural mechanistic formulas under
 six controlled knowledge conditions. This repository contains the dataset,
 prompt builders, numeric answer parser, batch scorer and validation tests.
