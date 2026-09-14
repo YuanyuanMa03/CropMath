@@ -34,6 +34,7 @@ quickstart 加载公开数据并用给定金标解答演练提示构建与答案
 | `scripts/` | 批量评分器及数据、公式目录、结果记录校验脚本 |
 | `tests/` | 公开解析器、校验器与真实数据加载测试 |
 | `examples/quickstart.py` | 本地数据与公开 API 冒烟示例 |
+| `release/cropmath-v1/paper_stats/` | 论文引用的统计全量表（CSV） |
 | `pyproject.toml`、`uv.lock` | 可复现的本地测试与数据加载环境 |
 
 数据集包含 252 道开发题与 751 道测试题；gold 为取自测试集的 95 道审计子集。

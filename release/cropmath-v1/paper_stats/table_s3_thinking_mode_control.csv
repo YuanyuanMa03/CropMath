@@ -1,0 +1,5 @@
+model,condition,n,acc_on,acc_off,acc_delta,trunc_on,trunc_off,avg_tokens_on,avg_tokens_off,parse_fail_on,parse_fail_on_pct
+qwen35_9b,C,751,60.9,81.5,-20.6,39.4,17.3,5878.5,794.1,277,36.88
+qwen35_9b,K_wrong,751,9.7,15.0,-5.3,81.9,61.5,7744.1,1658.7,593,78.96
+deepseek_r1_distill_qwen_14b,C,751,91.2,66.4,24.8,3.6,40.9,2212.2,1475.7,25,3.33
+deepseek_r1_distill_qwen_14b,K_wrong,751,14.2,12.8,1.4,6.8,49.5,2588.3,1601.0,51,6.79

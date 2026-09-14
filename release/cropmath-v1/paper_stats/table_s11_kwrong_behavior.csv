@@ -1,0 +1,6 @@
+model,blind_trust_pct,rejection_pct,ambiguous_pct,suspected_truncation_pct,n
+Qwen3-8B,43.4,45.8,10.8,0.0,751
+Qwen3-14B,36.4,45.9,17.7,0.1,751
+Qwen3.5-9B,36.1,61.8,2.1,61.5,751
+DeepSeek-R1-Distill-Qwen-14B,45.7,10.7,43.7,49.5,751
+Gemma-3-12B-it,53.8,31.3,14.9,0.4,751

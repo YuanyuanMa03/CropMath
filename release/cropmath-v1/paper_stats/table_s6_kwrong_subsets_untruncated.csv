@@ -1,0 +1,6 @@
+model,blind_acc_pct,blind_n,reject_acc_pct,reject_n,reject_untruncated_acc_pct,reject_untruncated_n
+qwen3_8b,6.4,326,4.4,344,4.4,344
+qwen3_14b,10.3,273,3.8,345,3.8,345
+qwen35_9b,25.5,271,9.3,464,28.8,139
+deepseek_r1_distill_qwen_14b,10.5,343,3.8,80,12.0,25
+gemma3_12b_it,8.7,404,3.8,235,3.8,235

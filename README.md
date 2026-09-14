@@ -38,6 +38,7 @@ and the selected public-source scan; a skipped check is never reported as passed
 | `scripts/` | Batch scorer, dataset, formula catalog and result-record validators |
 | `tests/` | Public parser, validation and actual dataset-loading tests |
 | `examples/quickstart.py` | Local data and public-API smoke example |
+| `release/cropmath-v1/paper_stats/` | Paper statistics tables (CSV) referenced in the paper |
 | `pyproject.toml`, `uv.lock` | Reproducible local test and dataset-loading environment |
 
 The dataset has 252 development questions and 751 test questions. Gold is a
